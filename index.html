@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>ExpenseMap</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="login">
+      <div class="c">
+        <div style="font-size: 42px">💸</div>
+        <h2 style="margin: 6px 0">ExpenseMap</h2>
+        <p class="k">
+          Masuk dengan nama panggilanmu. Data tersimpan di perangkat ini.
+        </p>
+        <input
+          id="u"
+          placeholder="Nama pengguna"
+          style="margin: 10px 0"
+          onkeydown="if (event.key === 'Enter') login();"
+        />
+        <button class="btn" style="width: 100%" onclick="login()">Masuk</button>
+      </div>
+    </div>
+    <div class="app">
+      <aside id="nav"></aside>
+      <main id="main"></main>
+    </div>
+    <dialog id="dlg">
+      <h3 style="margin-top: 0">Ekspor data (CSV)</h3>
+      <textarea id="exp" rows="10" readonly></textarea>
+      <div
+        style="
+          display: flex;
+          gap: 8px;
+          margin-top: 10px;
+          justify-content: flex-end;
+        "
+      >
+        <button class="btn g" onclick="cp()">Salin</button
+        ><button class="btn" onclick="dlg.close()">Tutup</button>
+      </div>
+    </dialog>
+    <script src="script.js"></script>
+  </body>
+</html>
